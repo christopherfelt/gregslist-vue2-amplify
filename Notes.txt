@@ -1,0 +1,1 @@
+Bootstrap-Vue only works with Vue2 and Bootstrap 4

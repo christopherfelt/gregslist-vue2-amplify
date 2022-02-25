@@ -1,18 +1,31 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <b-container style="height:75vh" class="">
+      <b-row class="h-100 d-flex align-items-center">
+          <b-col>
+              <Card title="Cars" description="Click to See Cars" redirectUrl="/cars" />
+          </b-col>
+          <b-col>
+              <Card title="Houses" description="Click to See Houses" />
+          </b-col>
+          <b-col>
+              <Card title="Jobs" description="Click to See Jobs" />
+          </b-col>
+      </b-row>
+  </b-container>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Card from "@/components/Card.vue"
 
 export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
-  }
+    name: "HomeView",
+    components: {
+        Card
+    }
+
 }
 </script>
+
+<style>
+
+</style>
