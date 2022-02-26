@@ -1,6 +1,6 @@
 <template>
-<div @click="clickHandler" v-b-hover="hoverHandler" :class="isHovered ? 'shadow-sm' : ''">
-    <b-card style="height: 200px" align="center" class="pt-4">
+    <b-card :style="cardStyle" align="center" class="p-0"  @click="clickHandler" v-b-hover="hoverHandler" :class="isHovered ? 'shadow-sm' : ''">
+        <b-card-img class="p-1" :src="imgSrc"></b-card-img>
         <b-card-title>
             {{title}}
         </b-card-title>
@@ -8,7 +8,6 @@
             {{description}}
         </b-card-text>
     </b-card>
-</div>
 </template>
 
 <script>
@@ -29,7 +28,12 @@ export default {
             type: String,
             default: "No Description"
         },
-        redirectUrl: String
+        redirectUrl: String,
+        cardStyle: String,
+        imgSrc:{
+            type: String,
+            default: "https://placekitten.com/g/200/200"
+        }
     },
     methods:{
         clickHandler(){
